@@ -1,2 +1,2 @@
-# crucible-community
-Crucible Community Edition - The open-source foundation of the Crucible Platform
+# Crucible Community Edition - The open-source foundation of the Crucible Platform
+Coming Soon
