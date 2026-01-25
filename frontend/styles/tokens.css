@@ -1,0 +1,70 @@
+:root {
+  /* Surfaces */
+  --rt-bg: #0b1220;
+  --rt-surface: #0f172a;
+  --rt-surface-2: #0b1426;
+  --rt-panel-elevated: rgba(15, 23, 42, 0.92);
+
+  /* Borders & Shadows */
+  --rt-border: rgba(148, 163, 184, 0.14);
+  --rt-border-strong: rgba(148, 163, 184, 0.28);
+  --rt-shadow: 0 20px 60px rgba(2, 6, 23, 0.55);
+  --rt-shadow-elevated: 0 24px 80px rgba(2, 6, 23, 0.62);
+
+  /* Text */
+  --rt-text: #e6edf7;
+  --rt-subtext: #a9b2c6;
+  --rt-muted: #94a3b8;
+
+  /* Accent */
+  --rt-accent-100: rgba(34, 211, 238, 0.1);
+  --rt-accent-600: #06b6d4;
+  --rt-accent-700: #0891b2;
+
+  /* Semantic */
+  --rt-success-100: rgba(16, 185, 129, 0.1);
+  --rt-success-700: #10b981;
+  --rt-warn-100: rgba(245, 158, 11, 0.1);
+  --rt-warn-700: #f59e0b;
+  --rt-danger-100: rgba(244, 63, 94, 0.1);
+  --rt-danger-700: #f43f5e;
+
+  /* Misc */
+  --rt-radius: 16px;
+  --rt-radius-lg: 20px;
+
+  /* Legacy aliases / brand palette */
+  --rt-navy-900: #0f1420;
+  --rt-navy-800: #141b2d;
+  --rt-navy-700: #1b2336;
+  --rt-navy-600: #232d44;
+  --rt-steel-700: #2a3350;
+  --rt-steel-600: #343d5a;
+  --rt-steel-500: #44506d;
+  --rt-steel-300: #5b6480;
+  --rt-steel-100: #a9b2c6;
+  --rt-gold-600: #f7d15c;
+  --rt-gold-500: #f2c24f;
+  --rt-gold-300: #f7dc85;
+  --rt-gold-100: #fff3c8;
+  --rt-gold-text: #f2c24f;
+  --rt-teal-500: #47d1c1;
+  --rt-rose-500: #ff6b7a;
+
+  /* Compatibility tokens */
+  --rt-panel: var(--rt-surface);
+  --rt-divider: rgba(255, 255, 255, 0.08);
+  --rt-border-soft: rgba(255, 255, 255, 0.06);
+  --rt-focus: var(--rt-accent-600);
+  --rt-grade-a: var(--rt-success-700);
+  --rt-grade-b: #b5e36b;
+  --rt-grade-c: #ffd166;
+  --rt-grade-d: #ff7d66;
+  --rt-warning-800: var(--rt-warn-700);
+  --rt-warning-100: var(--rt-warn-100);
+  --rt-info-700: var(--rt-accent-700);
+  --rt-info-100: var(--rt-accent-100);
+  --rt-shadow-panel: var(--rt-shadow);
+  --rt-font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --rt-font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
