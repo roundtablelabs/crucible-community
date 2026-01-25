@@ -7,7 +7,8 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  ORG: roundtable-labs
+  # Use repository owner dynamically instead of hardcoded org name
+  ORG: ${{ github.repository_owner }}
 
 jobs:
   build-api:
@@ -22,8 +23,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GHCR_TOKEN }}
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -62,8 +63,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GHCR_TOKEN }}
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -102,8 +103,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GHCR_TOKEN }}
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
