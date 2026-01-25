@@ -1,0 +1,39 @@
+name: CLA Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  cla-check:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.head.repo.full_name == github.repository || github.event.issue.pull_request
+    
+    steps:
+      - name: CLA Assistant
+        uses: contributor-assistant/github-action@v2.7.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          path-to-signatures: 'cla-signatures.json'
+          path-to-cla-document: 'CLA.md'
+          branch: 'main'
+          allowlist: bot
+          # Optional: Set to true to allow unsigned commits from bots
+          # signed-by-bot: true
+          # Optional: Set to true to skip CLA check for maintainers
+          # skip-maintainers: false
+          # Optional: Set to true to allow unsigned commits from organization members
+          # allow-unsigned-commits-from-members: false
+          # Optional: Set to true to create a comment on PR with CLA status
+          # create-comment: true
+          # Optional: Set to true to lock PRs until CLA is signed
+          # lock-pull-request-after-merge: false
