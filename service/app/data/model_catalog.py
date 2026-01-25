@@ -1,0 +1,20 @@
+MODEL_SEEDS = [
+    {"id": "gpt-5-pro", "display_name": "OpenAI GPT-5 Pro", "provider": "openai", "api_identifier": "openai/gpt-5-pro"},
+    {"id": "gpt-5", "display_name": "OpenAI GPT-5", "provider": "openai", "api_identifier": "openai/gpt-5"},
+    {"id": "o3", "display_name": "OpenAI o3", "provider": "openai", "api_identifier": "openai/o3"},
+    {"id": "o4-mini", "display_name": "OpenAI o4-mini", "provider": "openai", "api_identifier": "openai/o4-mini"},
+    {"id": "claude-sonnet-4.5", "display_name": "Anthropic Claude 4.5 Sonnet", "provider": "anthropic", "api_identifier": "anthropic/claude-sonnet-4.5", },
+    {"id": "claude-4.1-opus", "display_name": "Anthropic Claude 4.1 Opus", "provider": "anthropic", "api_identifier": "anthropic/claude-opus-4.1"},
+    {"id": "claude-4.5-haiku", "display_name": "Anthropic Claude 4.5 Haiku", "provider": "anthropic", "api_identifier": "anthropic/claude-haiku-4.5"},
+    {"id": "deepseek-r1", "display_name": "Deepseek R1", "provider": "Deepseek", "api_identifier": "deepseek/deepseek-r1"},
+    {"id": "deepseek-v3", "display_name": "Deepseek V3", "provider": "Deepseek", "api_identifier": "deepseek/deepseek-chat-v3-0324"},
+    {"id": "gemini-2.5-pro", "display_name": "Gemini 2.5 Pro", "provider": "Google", "api_identifier": "google/gemini-2.5-pro"},
+    {"id": "gemini-2.5-flash", "display_name": "Gemini 2.5 Flash", "provider": "Google", "api_identifier": "google/gemini-2.5-flash"},
+    {"id": "minimax-m1", "display_name": "MiniMax M1", "provider": "MiniMax", "api_identifier": "minimax/minimax-m1"},
+    {"id": "minimax-m2", "display_name": "MiniMax M2", "provider": "MiniMax", "api_identifier": "minimax/minimax-m2"},
+    {"id": "grok4", "display_name": "Grok 4", "provider": "xAI", "api_identifier": "x-ai/grok-4"},
+    {"id": "llama-3.1-405B", "display_name": "Llama 3.1 405B", "provider": "Meta", "api_identifier": "meta-llama/llama-3.1-405b"},
+    {"id": "llama-3.2-vision-90b", "display_name": "Llama 3.2 Vision 90B", "provider": "Meta", "api_identifier": "meta-llama/llama-3.2-90b-vision-instruct"},
+    {"id": "mistral-large-2", "display_name": "Mistral Large 2", "provider": "Mistral", "api_identifier": "mistralai/mistral-large-2411"},
+
+]
