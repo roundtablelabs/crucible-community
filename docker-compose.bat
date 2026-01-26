@@ -1,4 +1,5 @@
 @echo off
+setlocal enabledelayedexpansion
 REM ============================================================================
 REM Crucible Community Edition
 REM Copyright (C) 2026 Roundtable Labs Pty Ltd
@@ -79,22 +80,22 @@ if not exist ".env" (
         echo.
         echo # API Key Encryption Key (32 characters^)
         echo # WARNING: If this changes, all encrypted API keys will become unreadable!
-        echo API_KEY_ENCRYPTION_KEY=%ENCRYPTION_KEY%
+        echo API_KEY_ENCRYPTION_KEY=!ENCRYPTION_KEY!
         echo.
         echo # Community Edition Authentication Password
         echo # Auto-generated secure password - save this value!
-        echo ROUNDTABLE_COMMUNITY_AUTH_PASSWORD=%AUTH_PASSWORD%
+        echo ROUNDTABLE_COMMUNITY_AUTH_PASSWORD=!AUTH_PASSWORD!
         echo.
         echo # JWT Secrets (used for token signing^)
-        echo ROUNDTABLE_JWT_SECRET=%JWT_SECRET%
-        echo ROUNDTABLE_JWT_REFRESH_SECRET=%JWT_REFRESH_SECRET%
+        echo ROUNDTABLE_JWT_SECRET=!JWT_SECRET!
+        echo ROUNDTABLE_JWT_REFRESH_SECRET=!JWT_REFRESH_SECRET!
         echo.
         echo # Database Credentials
-        echo POSTGRES_USER=%POSTGRES_USER%
-        echo POSTGRES_PASSWORD=%POSTGRES_PASSWORD%
+        echo POSTGRES_USER=!POSTGRES_USER!
+        echo POSTGRES_PASSWORD=!POSTGRES_PASSWORD!
         echo.
         echo # Redis Credentials
-        echo REDIS_PASSWORD=%REDIS_PASSWORD%
+        echo REDIS_PASSWORD=!REDIS_PASSWORD!
         echo.
         echo # Optional API Keys
         echo ROUNDTABLE_OPENROUTER_API_KEY=
@@ -116,19 +117,19 @@ if not exist ".env" (
         echo ROUNDTABLE_LLM_RATE_LIMIT_WINDOW_SECONDS=60
     ) > .env
     
-    echo ‚úì Secrets generated successfully!
+    echo ??Secrets generated successfully!
     echo.
     echo ==================================================
     echo IMPORTANT: Save your credentials!
     echo ==================================================
     echo.
     echo Your secure credentials have been generated:
-    echo   - Authentication password: %AUTH_PASSWORD%
-    echo   - Database user: %POSTGRES_USER%
-    echo   - Database password: %POSTGRES_PASSWORD%
-    echo   - Redis password: %REDIS_PASSWORD%
+    echo   - Authentication password: !AUTH_PASSWORD!
+    echo   - Database user: !POSTGRES_USER!
+    echo   - Database password: !POSTGRES_PASSWORD!
+    echo   - Redis password: !REDIS_PASSWORD!
     echo.
-    echo ‚ö†Ô∏è  These values are saved in: .env
+    echo ?†Ô?  These values are saved in: .env
     echo    Keep this file secure and never commit it to version control!
     echo.
     echo Starting services...
